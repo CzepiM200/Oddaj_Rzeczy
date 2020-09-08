@@ -1,0 +1,48 @@
+@import "../../scss/general";
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &__image {
+    width: 40%;
+    height: 100%;
+    background-image: url("../../images/png/Hero.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__menu {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      max-width: 80%;
+      margin: 0.1em 0;
+      font-weight: 400;
+      color: $dark-text-color;
+      font-size: 28px;
+    }
+    svg {
+      margin: 2% 0 5% 0;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    p {
+      margin: 0;
+      padding: 1.8% 2%;
+      width: 40%;
+      border: 1px solid black;
+      text-transform: uppercase;
+      color: $dark-text-color;
+      font-size: 36px;
+      font-weight: 100;
+    }
+  }
+}
