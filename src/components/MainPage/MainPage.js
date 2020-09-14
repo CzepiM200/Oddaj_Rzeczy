@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../Header/Header";
 import Banner from "../Banner/Banner";
 import Informations from "../Informations/Informations";
+import About from "../About/About";
 
 const MainPage = () => {
   return (
@@ -10,6 +11,7 @@ const MainPage = () => {
       <Header />
       <Banner />
       <Informations />
+      <About />
     </section>
   );
 };
