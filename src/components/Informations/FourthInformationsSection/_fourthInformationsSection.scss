@@ -1,0 +1,19 @@
+@import "../../../scss/general";
+
+.informations__fourth {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: $dark-text-color;
+  &_buttons {
+    p {
+      margin: 0;
+      padding: 2% 3%;
+      border: 1px solid black;
+      text-transform: uppercase;
+      color: $dark-text-color;
+      font-size: 2em;
+      font-weight: 100;
+    }
+  }
+}
