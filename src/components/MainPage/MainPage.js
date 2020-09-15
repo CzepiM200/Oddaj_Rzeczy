@@ -5,6 +5,7 @@ import Banner from "../Banner/Banner";
 import Informations from "../Informations/Informations";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
+import Organizations from "../Organizations/Organizations";
 
 const MainPage = () => {
   return (
@@ -13,7 +14,7 @@ const MainPage = () => {
       <Banner />
       <Informations />
       <About />
-
+      <Organizations />
       <Contact />
     </section>
   );
