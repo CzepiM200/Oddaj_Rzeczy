@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Banner from "../Banner/Banner";
 import Informations from "../Informations/Informations";
 import About from "../About/About";
+import Contact from "../Contact/Contact";
 
 const MainPage = () => {
   return (
@@ -12,6 +13,8 @@ const MainPage = () => {
       <Banner />
       <Informations />
       <About />
+
+      <Contact />
     </section>
   );
 };
