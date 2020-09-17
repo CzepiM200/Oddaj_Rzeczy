@@ -1,7 +1,7 @@
 import "./_about.scss";
 import React from "react";
 import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.svg";
-import { ReactComponent as SignatureIcon } from "../../images/svg/Signature.svg";
+import SignatureIcon from "../../images/svg/Signature.svg";
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
           turnip greens parsnip.
         </p>
         <div className="about__description_signature">
-          <SignatureIcon />
+          <img src={SignatureIcon} />
         </div>
       </article>
       <article className="about__image"></article>
