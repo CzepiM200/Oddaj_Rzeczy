@@ -1,6 +1,7 @@
 @import "../../scss/general";
 
 .main-page {
+  user-select: none;
   position: relative;
   overflow-x: hidden;
   height: 100vh;
