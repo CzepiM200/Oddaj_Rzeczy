@@ -5,7 +5,7 @@ import SignatureIcon from "../../images/svg/Signature.svg";
 
 const About = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <article className="about__description">
         <h1 className="about__description_title">O nas</h1>
         <DecorationIcon />
