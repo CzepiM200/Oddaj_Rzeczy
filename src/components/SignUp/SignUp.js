@@ -2,6 +2,7 @@ import "./_signUp.scss";
 import React from "react";
 import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.svg";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -22,7 +23,9 @@ const SignUp = () => {
             <input type="password"></input>
           </form>
           <div className="signup__window_buttons">
-            <p className="signup__login">Zaloguj się</p>
+            <Link to="/login">
+              <p className="signup__login">Zaloguj się</p>
+            </Link>
             <p className="signup__signup">Załóż konto</p>
           </div>
         </article>
