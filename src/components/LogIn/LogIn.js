@@ -2,6 +2,7 @@ import "./_logIn.scss";
 import React from "react";
 import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.svg";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 const LogIn = () => {
   return (
@@ -20,7 +21,9 @@ const LogIn = () => {
             <input type="password"></input>
           </form>
           <div className="login__window_buttons">
-            <p className="login__signup">Załóż konto</p>
+            <Link to="/signup">
+              <p className="login__signup">Załóż konto</p>
+            </Link>
             <p className="login__login">Zaloguj się</p>
           </div>
         </article>
