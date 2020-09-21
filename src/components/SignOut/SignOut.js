@@ -2,6 +2,7 @@ import "./_signout.scss";
 import React from "react";
 import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.svg";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 const SignOut = () => {
   return (
@@ -14,7 +15,9 @@ const SignOut = () => {
             <DecorationIcon />
           </div>
           <div className="signout__window_buttons">
-            <p className="signout__home-page">Strona główna</p>
+            <Link to="/">
+              <p className="signout__home-page">Strona główna</p>
+            </Link>
           </div>
         </article>
       </section>
