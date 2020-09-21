@@ -21,7 +21,7 @@ const Header = () => {
           <Link to="/">
             <div className="header__nav-item">O co chodzi?</div>
           </Link>
-          <Link to="/#about">
+          <Link to={{ pathname: "/", hash: "#about" }}>
             <div className="header__nav-item">O nas</div>
           </Link>
           <Link to="/">
