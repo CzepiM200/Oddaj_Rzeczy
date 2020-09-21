@@ -4,6 +4,7 @@ import LogIn from "../LogIn/LogIn";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "../HomePage/HomePage";
 import SignUp from "../SignUp/SignUp";
+import SignOut from "../SignOut/SignOut";
 
 const MainPage = () => {
   return (
@@ -19,7 +20,9 @@ const MainPage = () => {
           <Route exact path="/signup">
             <SignUp />
           </Route>
-          <Route exact path="/signout"></Route>
+          <Route exact path="/signout">
+            <SignOut />
+          </Route>
         </Switch>
       </BrowserRouter>
     </section>
