@@ -1,13 +1,19 @@
 import "./_logIn.scss";
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.svg";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 
-const LogIn = () => {
+const LogIn = (props) => {
+  const { loggedIn, setLoggedIn } = props;
+
+  const HandleLogIn = (e) => {
+    setLoggedIn(true);
+  };
+
   return (
     <>
-      <Header />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <section className="login">
         <article className="login__window">
           <div className="login__window_top">
@@ -24,7 +30,11 @@ const LogIn = () => {
             <Link to="/signup">
               <p className="login__signup">Załóż konto</p>
             </Link>
-            <p className="login__login">Zaloguj się</p>
+            <Link to="/">
+              <p className="login__login" onClick={HandleLogIn}>
+                Zaloguj się
+              </p>
+            </Link>
           </div>
         </article>
       </section>

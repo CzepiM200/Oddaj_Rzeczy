@@ -7,10 +7,12 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Organizations from "../Organizations/Organizations";
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { loggedIn, setLoggedIn } = props;
+  console.log(loggedIn);
   return (
     <section className="home-page">
-      <Header />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Banner />
       <Informations />
       <About />

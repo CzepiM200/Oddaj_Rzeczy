@@ -4,10 +4,12 @@ import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.sv
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 
-const SignOut = () => {
+const SignOut = (props) => {
+  const { loggedIn, setLoggedIn } = props;
+
   return (
     <>
-      <Header />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <section className="signout">
         <article className="signout__window">
           <div className="signout__window_top">

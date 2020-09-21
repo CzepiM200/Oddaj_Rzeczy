@@ -2,17 +2,35 @@ import "./_header.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
+  const { loggedIn, setLoggedIn } = props;
   return (
     <section className="header">
       <header>
         <div className="header__login">
-          <Link to="/login">
-            <div className="header__login-item">Zaloguj</div>
-          </Link>
-          <Link to="/signup">
-            <div className="header__login-item signup-link">Załóż konto</div>
-          </Link>
+          {!loggedIn ? (
+            <>
+              <Link to="/login">
+                <div className="header__login-item">Zaloguj</div>
+              </Link>{" "}
+              <Link to="/signup">
+                <div className="header__login-item signup-link">
+                  Załóż konto
+                </div>
+              </Link>
+            </>
+          ) : (
+            <Link to="/signout">
+              <div
+                className="header__login-item singout"
+                onClick={() => {
+                  setLoggedIn(false);
+                }}
+              >
+                Wyloguj się
+              </div>
+            </Link>
+          )}
         </div>
         <nav className="header__nav">
           <Link to="/">
