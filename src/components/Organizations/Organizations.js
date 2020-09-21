@@ -17,7 +17,7 @@ const Organizations = () => {
       <article className="organizations__type">
         <div className="organizations__type_buttons">
           <p
-            className={fundations && "organizations__selected"}
+            className={fundations ? "organizations__selected" : undefined}
             onClick={() => {
               setFundations(true);
               setOrganizations(false);
@@ -27,7 +27,7 @@ const Organizations = () => {
             Fundacjom
           </p>
           <p
-            className={organizations && "organizations__selected"}
+            className={organizations ? "organizations__selected" : undefined}
             onClick={() => {
               setFundations(false);
               setOrganizations(true);
@@ -37,7 +37,7 @@ const Organizations = () => {
             Organizacjom pozarządowym
           </p>
           <p
-            className={local && "organizations__selected"}
+            className={local ? "organizations__selected" : undefined}
             onClick={() => {
               setFundations(false);
               setOrganizations(false);

@@ -31,10 +31,7 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid black;
-        &:focus,
-        &:active {
-          border: none;
-        }
+        outline-width: 0;
         &:last-child {
           margin-bottom: 0;
         }
