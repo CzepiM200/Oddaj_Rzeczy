@@ -1,13 +1,8 @@
 import "./_mainPage.scss";
 import React from "react";
-import Header from "../Header/Header";
-import Banner from "../Banner/Banner";
-import Informations from "../Informations/Informations";
-import About from "../About/About";
-import Contact from "../Contact/Contact";
-import Organizations from "../Organizations/Organizations";
 import LogIn from "../LogIn/LogIn";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomePage from "../HomePage/HomePage";
 
 const MainPage = () => {
   return (
@@ -15,12 +10,7 @@ const MainPage = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Header />
-            <Banner />
-            <Informations />
-            <About />
-            <Organizations />
-            <Contact />
+            <HomePage />
           </Route>
           <Route exact path="/login">
             <LogIn />
