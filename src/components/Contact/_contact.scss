@@ -27,6 +27,9 @@
         border: none;
         border-bottom: 1px solid $line-color;
         outline-width: 0;
+        &.error {
+          border-bottom: 1px solid red;
+        }
       }
       textarea {
         resize: none;
