@@ -28,6 +28,9 @@
         border-bottom: 1px solid $line-color;
         outline-width: 0;
       }
+      textarea {
+        resize: none;
+      }
     }
     &_top {
       margin-bottom: 8%;

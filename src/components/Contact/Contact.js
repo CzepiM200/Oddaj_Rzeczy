@@ -21,7 +21,7 @@ const Contact = () => {
           </div>
           <div className="contact__form_bottom">
             <label>Wpisz swoją wiadomość</label>
-            <textarea></textarea>
+            <textarea rows="3"></textarea>
           </div>
           <button
             className="contact__form_submit"
