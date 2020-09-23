@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "../HomePage/HomePage";
 import SignUp from "../SignUp/SignUp";
 import SignOut from "../SignOut/SignOut";
+import PassItems from "../PassItems/PassItems";
 
 const MainPage = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -23,6 +24,9 @@ const MainPage = () => {
           </Route>
           <Route exact path="/signout">
             <SignOut loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+          </Route>
+          <Route exact path="/passitems">
+            <PassItems loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
           </Route>
         </Switch>
       </BrowserRouter>
