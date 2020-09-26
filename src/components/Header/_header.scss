@@ -21,7 +21,26 @@
         border: 1px solid $primary-color;
       }
       .singout {
-        border: 1px solid black;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid black;
+        }
+      }
+    }
+    &-items {
+      display: flex;
+      align-items: center;
+      .email {
+        color: black;
+      }
+      a {
+        div {
+          margin: 0 0.4em;
+        }
+        .pass-items {
+          color: black;
+          border: 1px solid $primary-color;
+        }
       }
     }
     &-item {

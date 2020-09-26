@@ -20,16 +20,26 @@ const Header = (props) => {
               </Link>
             </>
           ) : (
-            <Link to="/signout">
-              <div
-                className="header__login-item singout"
-                onClick={() => {
-                  setLoggedIn(false);
-                }}
-              >
-                Wyloguj się
+            <div className="header__login-items">
+              <div className="header__login-item email">
+                Cześć marcin.czepiela@gmail.com!
               </div>
-            </Link>
+              <Link to="/passitems">
+                <div className="header__login-item pass-items">
+                  Oddaj rzeczy
+                </div>
+              </Link>
+              <Link to="/signout">
+                <div
+                  className="header__login-item singout"
+                  onClick={() => {
+                    setLoggedIn(false);
+                  }}
+                >
+                  Wyloguj się
+                </div>
+              </Link>
+            </div>
           )}
         </div>
         <nav className="header__nav">
