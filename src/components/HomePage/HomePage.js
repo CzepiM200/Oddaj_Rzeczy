@@ -9,7 +9,7 @@ import Organizations from "../Organizations/Organizations";
 
 const HomePage = (props) => {
   const { loggedIn, setLoggedIn } = props;
-  console.log(loggedIn);
+
   return (
     <section className="home-page">
       <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />

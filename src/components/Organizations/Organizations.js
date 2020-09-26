@@ -26,6 +26,28 @@ const tempFundationsList = [
       "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
     items: "ubrania, jedzenie, sprzęt AGD, meble, zabawki",
   },
+  {
+    name: "Fundacja “Dla dzieci 2”",
+    description: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+    items: "ubrania, meble, zabawki",
+  },
+  {
+    name: "Fundacja “Bez domu 2”",
+    description:
+      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+    items: "ubrania, jedzenie, ciepłe koce",
+  },
+  {
+    name: "Fundacja “Dbam o Zdrowie 3”",
+    description:
+      "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+    items: "ubrania, jedzenie, sprzęt AGD, meble, zabawki",
+  },
+  {
+    name: "Fundacja “Dla dzieci 3”",
+    description: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+    items: "ubrania, meble, zabawki",
+  },
 ];
 
 const Organizations = () => {
@@ -60,7 +82,6 @@ const Organizations = () => {
     });
   };
 
-  console.log(page);
   return (
     <section className="organizations">
       <article className="organizations__header">
