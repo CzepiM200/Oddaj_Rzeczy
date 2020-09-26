@@ -9,9 +9,26 @@
   justify-content: center;
   background-image: url("../../images/png/Background.png");
   background-position: top;
+  @media screen and (max-width: $laptop) {
+    background-position: right;
+  }
   background-size: cover;
   &__form {
     padding-right: 10%;
+    @media screen and (max-width: $laptop) {
+      padding-right: 10%;
+    }
+    @media screen and (max-width: $tablet) {
+      padding-right: 0%;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: $mobile-l) {
+      transform: scale(0.9);
+    }
+    @media screen and (max-width: $mobile-m) {
+      transform: scale(0.85);
+      width: 100%;
+    }
     form {
       margin-top: 10%;
       display: flex;
