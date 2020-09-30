@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
+import authentication from "./firebase/authentication"
 
 function App() {
   return (

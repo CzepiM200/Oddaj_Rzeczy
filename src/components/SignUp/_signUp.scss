@@ -35,6 +35,9 @@
         &:last-child {
           margin-bottom: 0;
         }
+        &.error {
+          border-bottom: 1px solid red;
+        }
       }
     }
     &_buttons {
