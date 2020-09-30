@@ -8,8 +8,24 @@
   background-position: center;
   background-size: cover;
   color: $dark-text-color;
+  @media screen and (max-width: 460px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
   &_item {
     width: 20%;
+    @media screen and (max-width: $laptop) {
+      width: 25%;
+    }
+    @media screen and (max-width: $tablet) {
+      width: 45%;
+      margin: 1em 0;
+    }
+    @media screen and (max-width: $mobile-l) {
+      width: 80%;
+    }
     h1 {
       margin: 0;
       font-weight: 100;
