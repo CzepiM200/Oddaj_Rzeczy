@@ -14,7 +14,25 @@ export const SignUpWithEmailAndPassword = (email, password, history) => {
       alert("Konto zostało założone prawidłowo");
     })
     .catch((error) => {
-      alert(error.message);
+      alert(`W trakcie zakłądania konta wystąpił bład: ${error.message}`);
+    });
+};
+
+export const LoginWithEmailAndPassword = (
+  email,
+  password,
+  history,
+  setEmail
+) => {
+  auth
+    .signInWithEmailAndPassword(email, password)
+    .then((res) => {
+      setEmail(email);
+      history.push("/");
+      alert("Zalogowano pomyślnie");
+    })
+    .catch((error) => {
+      alert("W trakcie logowania wystąpił błąd");
     });
 };
 
