@@ -1,9 +1,13 @@
 import "./_header.scss";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const { loggedIn, setLoggedIn } = props;
+  const { loggedIn, setLoggedIn, auth, user, setUser } = props;
+  let email = "";
+  if (auth && auth.user) {
+    email = user.email;
+  }
   return (
     <section className="header">
       <header>
@@ -16,24 +20,24 @@ const Header = (props) => {
               <Link to="/signup">
                 <div className="header__login-item signup-link">
                   Załóż konto
-                </div>
+                </div> 
               </Link>
             </>
-          ) : (
+          ) : ( 
             <div className="header__login-items">
               <div className="header__login-item email">
-                Cześć marcin.czepiela@gmail.com!
+                Cześć {email}!
               </div>
               <Link to="/passitems">
                 <div className="header__login-item pass-items">
                   Oddaj rzeczy
                 </div>
               </Link>
-              <Link to="/signout">
+              <Link to="/signout"> 
                 <div
                   className="header__login-item singout"
                   onClick={() => {
-                    setLoggedIn(false);
+                    auth.Logout();
                   }}
                 >
                   Wyloguj się

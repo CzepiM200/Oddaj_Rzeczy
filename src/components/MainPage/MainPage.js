@@ -7,26 +7,26 @@ import SignUp from "../SignUp/SignUp";
 import SignOut from "../SignOut/SignOut";
 import PassItems from "../PassItems/PassItems";
 
-const MainPage = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+const MainPage = (props) => {
+  const { loggedIn, setLoggedIn, auth, user, setUser } = props;
   return (
     <section className="main-page">
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <HomePage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <HomePage loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}  auth={auth} />
           </Route>
           <Route exact path="/login">
-            <LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}  auth={auth}/>
           </Route>
           <Route exact path="/signup">
-            <SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}  auth={auth} />
           </Route>
           <Route exact path="/signout">
-            <SignOut loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <SignOut loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}  auth={auth} />
           </Route>
           <Route exact path="/passitems">
-            <PassItems loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <PassItems loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}  auth={auth} />
           </Route>
         </Switch>
       </BrowserRouter>

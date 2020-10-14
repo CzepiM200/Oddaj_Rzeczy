@@ -4,9 +4,9 @@ import { useHistory } from "react-router-dom";
 import { ReactComponent as DecorationIcon } from "../../images/svg/Decoration.svg";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
-import { SignUpWithEmailAndPassword } from "../../firebase/authentication";
 
-const SignUp = () => {
+const SignUp = (props) => {
+  const { auth } = props;
   const [emailValidation, setEmailValidation] = useState(true);
   const [emailValue, setEmailValue] = useState("");
   const [passwordValidation, setPasswordValidation] = useState(true);
@@ -48,7 +48,7 @@ const SignUp = () => {
       tempPasswordValidation &&
       tempSecondPasswordValidation
     ) {
-      SignUpWithEmailAndPassword(emailValue, passwordValue, history);
+      auth.SignUpWithEmailAndPassword(emailValue, passwordValue, history);
     }
   };
 
